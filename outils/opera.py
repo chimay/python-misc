@@ -7,7 +7,6 @@
 # {{{ positif
 
 def positif(x, strict = False) :
-
 	if not strict : return x >= 0
 	else : return x > 0
 
@@ -18,7 +17,6 @@ def positif(x, strict = False) :
 # {{{ negatif
 
 def negatif(x, strict = False) :
-
 	if not strict : return x <= 0
 	else : return x < 0
 
@@ -37,7 +35,6 @@ def signe(a) : return (1 if a >= 0 else -1)
 # {{{ signeTernaire
 
 def signeTernaire(a) :
-
 	if a > 0 : return 1
 	if a < 0 : return -1
 	if a == 0 : return 0

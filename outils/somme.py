@@ -75,13 +75,9 @@ def progressionGeometrique(a, n) : return ( 1.0 - a ** (n + 1) ) / (1 - a)
 # {{{  profil
 
 def profil(dictionnaire) :
-
 	journalier = dictionnaire['journalier']
-
 	cProfile.run('fonction(...)', 'profil')
-
 	p = pstats.Stats('profil')
-
 	#p.sort_stats('time').print_stats()
 	p.sort_stats('cumulative').print_stats()
 
@@ -93,23 +89,14 @@ def profil(dictionnaire) :
 # {{{ main
 
 if __name__ == '__main__' :
-
 	print __file__
-
 	N = 200
-
 	print sum(range(1, N + 1)), progressionArithmetique(N)
-
 	p2 = [ e * e for e in range(1, N + 1) ]
-
 	print sum(p2), progressionQuadratique(N)
-
 	N = 12
-
 	a = 1.98
-
 	g = [ a ** e for e in range(N + 1) ]
-
 	print sum(g), progressionGeometrique(a, N)
 
 # }}}

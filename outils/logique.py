@@ -11,11 +11,8 @@ def binaire(a) : return (1 if a >= 0 else -1)
 # {{{ ternaire
 
 def ternaire(a, seuil = 0) :
-
 	if a > seuil : return 1
-
 	if a < -seuil : return -1
-
 	if a >= -seuil and a <= seuil : return 0
 
 # }}}
@@ -25,9 +22,7 @@ def ternaire(a, seuil = 0) :
 # {{{ floue
 
 def floue(a, seuil) :
-
 	y = a / float(seuil)
-
 	return max(min(y, 1), -1)
 
 # }}}
@@ -46,7 +41,6 @@ def non(a, logique = binaire) : return (1 if logique(a) == -1 else -1)
 # {{{ et
 
 def et(a, b, logique = binaire) :
-
 	return (1 if logique(a) == 1 and logique(b) == 1 else -1)
 
 # }}}
@@ -56,7 +50,6 @@ def et(a, b, logique = binaire) :
 # {{{ ou
 
 def ou(a, b, logique = binaire) :
-
 	return (1 if logique(a) == 1 or logique(b) == 1 else -1)
 
 # }}}
@@ -67,18 +60,12 @@ def ou(a, b, logique = binaire) :
 # {{{ teste
 
 def teste() :
-
 	L = []
-
 	N = int(1e7)
 	M = N // 10
-
 	for i in range(N) :
-
 		a = float(i) / 1000
-
 		L = binaire(a)
-
 		if i % M == 0 : print i, a, L
 
 # }}}
@@ -88,15 +75,12 @@ def teste() :
 # {{{ main
 
 if __name__ == '__main__' :
-
 	"""
 	Logique floue
-
 	1        : Vrai
 	-1 --> 1 : Ambigu
 	-1       : Faux
 	"""
-
 	pass
 
 # }}}

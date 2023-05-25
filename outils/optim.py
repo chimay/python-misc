@@ -39,17 +39,11 @@ def argmax(liste) : return liste.index(max(liste))
 # {{{ argminlagrange
 
 def argminlagrange(liste, indices = []) :
-
 	if indices == [] : indices = range(len(liste))
-
 	sousliste = [ liste[i] for i in indices ]
-
 	minimum = min(sousliste)
-
 	argumentSousListe = sousliste.index(minimum)
-
 	argument = indices[argumentSousListe]
-
 	return argument
 
 # }}}
@@ -59,17 +53,11 @@ def argminlagrange(liste, indices = []) :
 # {{{ argmaxlagrange
 
 def argmaxlagrange(liste, indices = []) :
-
 	if indices == [] : indices = range(len(liste))
-
 	sousliste = [ liste[i] for i in indices ]
-
 	maximum = max(sousliste)
-
 	argumentSousListe = sousliste.index(maximum)
-
 	argument = indices[argumentSousListe]
-
 	return argument
 
 # }}}
@@ -80,9 +68,7 @@ def argmaxlagrange(liste, indices = []) :
 # {{{ argminCondition
 
 def argminCondition(liste, condition) :
-
 	indices = indicesCondition(liste, condition)
-
 	return argminlagrange(liste, indices)
 
 # }}}
@@ -92,9 +78,7 @@ def argminCondition(liste, condition) :
 # {{{ argmaxCondition
 
 def argmaxCondition(liste, condition) :
-
 	indices = indicesCondition(liste, condition)
-
 	return argmaxlagrange(liste, indices)
 
 # }}}

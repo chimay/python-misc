@@ -138,26 +138,21 @@ def regressionPolynomiale(x, y, degre) :
 # {{{ main
 
 if __name__ == '__main__' :
-
 	print '################# Module science.matrice ###############################'
-
 	a = pl.arange(0,2.4,0.1)
 	print a
 	a.shape = (2,4,3)
 	print a
 	a.shape = 4,6
 	print a
-
 	print pl.eye(10)
 	print pl.ones((4,2,3))
 	print pl.zeros((2,3,4))
-
 	A = pl.mat(a)
 	print A
 	print A.A
 	print A.T
 	print (2 * pl.mat(pl.eye(2))).I
-
 	b = pl.linspace(0,2,4)
 	x = moindresCarres(A, b)[0]
 	print pl.dot(A, x)
