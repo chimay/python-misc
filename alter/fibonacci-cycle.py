@@ -4,16 +4,11 @@
 import sys
 
 if __name__ == '__main__' :
-
     fibo = [0, 1]
     derniers = [0, 1]
-
     for entier in range(2,720) :
-
         fibo += [fibo[-1] + fibo[-2]]
-
         derniers += [fibo[-1] % 10]
-
     print(derniers[0:60])
     print(derniers[60:120])
     print(derniers[120:180])

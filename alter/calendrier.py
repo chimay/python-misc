@@ -50,13 +50,9 @@ precision = 4
 # {{{  profil
 
 def profil(dictionnaire) :
-
 	journalier = dictionnaire['journalier']
-
 	cProfile.run('fonction(...)', 'profil')
-
 	p = pstats.Stats('profil')
-
 	#p.sort_stats('time').print_stats()
 	p.sort_stats('cumulative').print_stats()
 
@@ -68,7 +64,6 @@ def profil(dictionnaire) :
 # {{{ testeTout
 
 def testeTout(dictionnaire) :
-
 	journalierLineaire = dictionnaire['journalierLineaire']
 	journalier = dictionnaire['journalier']
 	hebdomadaire = dictionnaire['hebdomadaire']
@@ -83,9 +78,7 @@ def testeTout(dictionnaire) :
 # {{{ teste
 
 def teste(dictionnaire) :
-
 	#profil(dictionnaire)
-
 	testeTout(dictionnaire)
 
 # }}}
@@ -95,11 +88,8 @@ def teste(dictionnaire) :
 # {{{ main
 
 if __name__ == '__main__' :
-
 	import os, sys
-
 	arguments = sys.argv
-
 	if len(arguments) > 3 :
 		repertoire = arguments[1]
 		logarithme = arguments[2]
@@ -110,19 +100,14 @@ if __name__ == '__main__' :
 		logarithme = 'log-'
 		actif = os.getcwd().split('/')[-1] + '-'
 		fichier = 'journalier.txt'
-
 	# Linéaire
-
 	journalierLineaire = repertoire + actif + fichier
-
 	# Logarithmique
-
 	journalier = repertoire + logarithme + actif + 'journalier.txt'
 	hebdomadaire = repertoire + logarithme + actif + 'hebdomadaire.txt'
 	mensuel = repertoire + logarithme + actif + 'mensuel.txt'
 	trimestriel = repertoire + logarithme + actif + 'trimestriel.txt'
 	annuel = repertoire + logarithme + actif + 'annuel.txt'
-
 	dictionnaire = {
 		'journalierLineaire' : journalierLineaire,
 		'journalier' : journalier,
@@ -131,9 +116,7 @@ if __name__ == '__main__' :
 		'trimestriel' : trimestriel,
 		'annuel' : annuel
 	}
-
 	print 'Traitement', journalierLineaire
-
 	teste(dictionnaire)
 
 # }}}
