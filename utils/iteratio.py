@@ -39,7 +39,6 @@ def combinaison(*arguments) :
 if __name__ == '__main__' :
 	for e in combinaison(range(2), range(1, 4), range(2, 4), range(3, 5)) :
 		print e
-
 	pass
 
 # }}}
